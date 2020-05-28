@@ -1,0 +1,18 @@
+h3{
+    color: aqua;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: rgb(197, 58, 58);
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+div{
+    color: #AFCFBD;
+    text-align: left;
+    text-transform: lowercase;
+    font-size: 25px;
+}
