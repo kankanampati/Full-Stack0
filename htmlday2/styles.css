@@ -1,0 +1,14 @@
+.a1{
+    color:red;
+    font-style:oblique;
+}
+.a2{
+    color: brown;
+    font-style:normal;
+    font-variant: small-caps;
+}
+.a3{
+    color: chartreuse;
+    font-style: italic;
+    font-variant:small-caps;
+}
