@@ -1,0 +1,29 @@
+.main{
+    display: inline-block;
+    border: 2px solid black;
+    background-color: lightgray;
+    text-align: center;
+    width: 100%;
+}
+.logo1{
+    border: 2px solid red;
+    float: left;
+}
+.logo2{
+    border: 2px solid red;
+    float: right;
+}
+.name{
+    display: inline-block;
+    padding-top: 20px;
+}
+nav{
+    border: 2px solid black;
+    background-color: lightskyblue;
+    width: 100%;
+    padding: 20px;
+}
+a{
+    padding: 65px;
+    text-transform: uppercase;
+}
