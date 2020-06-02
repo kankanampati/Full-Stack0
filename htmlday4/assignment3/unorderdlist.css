@@ -1,0 +1,10 @@
+ul{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 20%;
+    text-transform: uppercase;
+}
+a{
+    padding: 10px;
+    color: lightslategrey;
+}
