@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <script>
+            function check(){
+                var user=/[A-Z][A-Za-z0-9]{3,7}/;
+                var pass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+                var user,pass;
+                user=document.getElementById("user").value;
+                pass=document.getElementById("pass").value;
+               if((u.test(user))&&(p.test(pass))){
+                    window.alert("Login Successful");
+                }
+                else{
+                    window.alert("Unsuccessful Login");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            Username: <input type="text" id="user" placeholder="Enter Username"/><br>
+            Password: <input type="password" id="pass" placeholder="Enter Password"/><br>
+            Full Name: <input type="text" placeholder="Enter Name"/><br>
+            Department: <input type="text" placeholder="Enter Department"/><br>
+            Address: <textarea rows="5" cols="10" placeholder="Enter Address"></textarea><br>
+            <button type="button" onclick="check()">Submit</button>
+        </div>
+    </body>
+</html>

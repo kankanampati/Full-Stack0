@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Number</title>
+        <script>
+            function check(){
+                var p=/[6-9][0-9]{9}$|[0][6-9][0-9]{9}$|[+][9][1][6-9][0-9]{9}$/;
+                var num=document.getElementById("num").value;
+                if(p.test(num)){
+                    window.alert("Valid");
+                }
+                else{
+                    window.alert("Invalid");
+                }   
+            }
+        </script>
+    </head>
+    <body>
+        Phone No: <input type="text" placeholder="Enter Number" id="num"/><br>
+        <button type="button" onclick="check()">Check</button>
+    </body>
+</html>
