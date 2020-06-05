@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>feedback form</title>
+        <script>
+            function myfun()
+            {
+                var user,mail,rollno;
+                user=document.getElementById("txtusername").value;
+                mail=document.getElementById("txtmail").value;
+                rollno=document.getElementById("txtrollno").value;
+                var e=/^[a-zA-Z0-9._-]{6,12}[@][a-z]{3,15}[.][a-z]{2,6}$/;
+                var r=/^[2][2][1][7][1][0][3][0-9]{2}[0-9]{3}$/;
+                if(e.test(mail)&&r.test(rollno))
+                {
+                    window.alert("valid");
+                }
+                else{
+                    window.alert("invalid");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        username :<input type="text" id="txtusername"/><br />
+        emailid  :<input type="text" id="txtemailid"/><br/>
+        rollno   :<input type="number" id="txtrollno"/><br/>
+        <button type="button" onclick="myfun()">validate</button>
+    </body>
+</html>

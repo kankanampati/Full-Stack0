@@ -1,0 +1,36 @@
+.main{
+    display: inline-block;
+    border: 2px solid black;
+    background-color: orangered;
+    text-align: center;
+    width: 100%;
+}
+.logo1{
+    border: 2px solid white;
+    float:left;
+   
+}
+.logo2{
+    border: 2px solid white;
+    float: right;
+    
+}
+.name{
+    display: inline-block;
+    padding-top: 20px;
+}
+nav{
+    border: 3px solid black;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 40px;
+}
+.logo3{
+    float:left;
+    width: 50%;
+}
+
+a{
+    padding: 65px;
+    text-transform: uppercase;
+}
