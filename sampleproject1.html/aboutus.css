@@ -1,0 +1,8 @@
+.a1{
+    background-image: url("bus2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: silver;
+    backface-visibility: initial;
+}

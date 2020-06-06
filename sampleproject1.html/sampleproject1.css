@@ -1,0 +1,47 @@
+.main{
+    display: inline-block;
+    border: 2px solid black;
+    background-color: orangered;
+    text-align: center;
+    width: 100%;
+}
+.logo1{
+    border: 2px solid white;
+    float:left;
+
+}
+.logo2{
+    border: 2px solid white;
+    float: right;
+
+}
+.logo2 img{
+    max-height: 90px;
+}
+.name{
+    display: inline-block;
+    padding-top: 20px;
+}
+nav{
+    border: 3px solid black;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 40px;
+}
+.logo3{
+    float:right;
+    width: 30%;
+    text-decoration-color: lawngreen;
+
+}
+
+a{
+    padding: 65px;
+    text-transform: uppercase;
+}
+.a3{
+    background-image: url("bus3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

@@ -1,0 +1,21 @@
+.a1{
+    background-color: tomato;
+    width: 700px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+.a1 label{
+    width: 30%;
+}
+.a1 input{
+    width: 70%;
+    margin-bottom: 10px;
+}
+.a2{
+    background-image: url("bus2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

@@ -1,0 +1,36 @@
+.a1{
+    background-color:lightblue;
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+.a1 label{
+    width: 30%;
+}
+.a1 input{
+    width: 70%;
+    margin-bottom: 10px;
+}
+.a2{
+    background-image: url("bus2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.form-group{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+.form-group label{
+    width: 30%;
+}
+.form-group input, .form-group textarea{
+    width: 70%;
+}
+.form-group .radio-btn{
+    width: auto;
+}

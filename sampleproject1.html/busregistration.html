@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <link rel="stylesheet" href="sampleproject1.css"/>
+        <link rel="stylesheet" href="busregistration.css"/>
+        <script>
+            function check(){
+                var user=/[A-Z][A-Za-z0-9]{3,7}/;
+                var pass=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+
+                var user,pass;
+                user=document.getElementById("user").value;
+                pass=document.getElementById("pass").value;
+               if((u.test(user))&&(p.test(pass))){
+                    window.alert("Login Successful");
+                }
+                else{
+                    window.alert("Unsuccessful Login");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="logo1">
+                <img src="logo.png" /> 
+            </div>
+            <div class="name">
+                <h3>MEGHANA TRAVELS</h3>
+            </div>
+            <div class="logo2">
+                <img src="bus.jpg"/> 
+            </div>
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="busregistration.html">Registration</a>
+            <a href="feedback.html">feedback</a>
+
+
+        </nav>
+      
+        <div class="a2">
+            <p style="text-align: center;">REGISTRATION</p>
+            <div class="a1">
+            <div class="form-group">
+                <label> FULL NAME: </label>
+                <input type="text" id="fullname" placeholder="Enter full name"/>           
+            </div>
+            <div class="form-group">
+                <label> AGE      : </label>
+                <input type="text" id="age" placeholder="age"/>
+            </div>
+            <div class="form-group">
+                 <label> GENDER   : </label>
+                 <input type="radio" name="gender" value="male" class="radio-btn">male 
+                 <input type="radio" name="gender" value="female" class="radio-btn">female   
+            </div>  
+            <div class="form-group">                    
+                <label>E-MAIL ID : </label>
+                <input type="text" placeholder="email"/>
+            </div>
+            <div class="form-group">                    
+                <label>PASSWORD : </label>
+                <input type="password" id="pass"  placeholder="Enter password "/>
+            </div>
+            <div class="form-group"> 
+                <label>ADDRESS  : </label>
+                <textarea rows="5" cols="10" placeholder="Enter Address"></textarea>
+            </div>
+             <div class="form-group">
+                <label>PHONE NO : </label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+            </div>
+                       <button type="button" onclick="check()">Register</button>
+           </div>
+        </div>
+    </body>
+</html>
