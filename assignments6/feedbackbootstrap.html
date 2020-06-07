@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        th{
+            text-align: center;
+        }
+        input{
+            border-radius: 10px;
+            padding: 5px;
+        }
+        td{
+            font-family: cursive;
+        }
+        #button{
+                padding-left: 46.5%;
+            }
+        textarea{
+            border-radius: 10px;
+        }
+        ::placeholder{
+            padding-left: 5px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="thead-dark">
+                    <th colspan="2">Feedback Form</th>
+                </tr>    
+                <tr>
+                    <td>Name: </td><td><input type="text" placeholder="Enter Name"/></td>
+                </tr>
+                <tr>
+                    <td>Department: </td><td><input type="text" placeholder="Enter Department"/></td>
+                </tr>
+                <tr>
+                    <td>Course: </td><td><input type="text" placeholder="Enter Course"></td>
+                </tr>
+                <tr>
+                    <td>Email Id: </td><td><input type="text" placeholder="Enter Email Id"/></td>
+                </tr>
+                <tr>
+                    <td>Project: </td><td><input type="text" placeholder="Enter Project Name"></td>
+                </tr>
+                <tr>
+                    <td>Feedback: </td><td><textarea name="Feedback" cols="30" rows="5" placeholder="Enter Feedback"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="button"><button type="button" class="btn btn-primary">Submit</button></td>
+                </tr>
+            </table>    
+        </div>
+    </body>
+</html>
