@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu Bar</title>
+        <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="../bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btnfadeIn").click(function(){
+                    $("#menu,#menu").fadeIn(2000);
+                });
+                $("#btnfadeOut").click(function(){
+                    $("#menu,#menu").fadeOut(2000);
+                });
+                $("#btnToggle").click(function(){
+                    $("#menu,#menu").fadeToggle(2000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="list-group w-25">
+                <a class="list-group-item bg-dark font-weight-bold" href="#"><p id="menu">Home</p></a>
+                <a class="list-group-item bg-dark font-weight-bold" href="#"><p id="menu">Products</p></a>
+                <a class="list-group-item bg-dark font-weight-bold" href="#"><p id="menu">Services</p></a>
+                <a class="list-group-item bg-dark font-weight-bold" href="#"><p id="menu">About</p></a>
+                <a class="list-group-item bg-dark font-weight-bold" href="#"><p id="menu">Contact</p></a>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" id="btnfadeIn">Fade In</button>
+            <button type="button" class="btn btn-primary btn-sm" id="btnfadeOut">Fade Out</button>
+            <button type="button" class="btn btn-primary btn-sm" id="btnToggle">Fade Toggle</button>    
+          </div>
+        </body>
+</html>
