@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animate Less Frames</title>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#box").toggle(5000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p><input type="button" value="Run" id="btn"></p>
+        <div id="box" style="width: 100px; height: 100px; background: #254BF4;"></div>
+    </body>
+</html>

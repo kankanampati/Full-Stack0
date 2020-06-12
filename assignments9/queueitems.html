@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animate Delay</title>
+        <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("#box").fadeIn();
+                    $("#box").delay(1000).animate({height: '500px'});
+                    $("#box").delay(1000).animate({width: '500px'});
+                    $("#box").delay(1000).animate({height: '100px'});
+                    $("#box").delay(1000).animate({width: '100px'});
+                });
+                $("#btn2").click(function(){
+                    $("#box").delay(1000).fadeToggle();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button" class="btn btn-primary" id="btn1">Start Animate</button>
+        <button type="button" class="btn btn-primary" id="btn2">Stop Animate</button>
+        <div id="box" style="background: #5858FA; height: 100px; width: 100px; margin: 6px;"></div>
+    </body>
+</html>
