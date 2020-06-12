@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.validation.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){                
+                $("#validateLogin").validate({
+                    rules: {
+                        username: {
+                            required: true,
+                        },
+                        password: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 12,
+                        }
+                    },
+                    messages: {
+                        username: {
+                            required: "Enter Username"
+                        },
+                        password: {
+                            required: "Enter Password",
+                            minlength: "Password must be minimum of 6 characters",
+                            maxlength: "Password must not exceed 12 characters"
+                        }
+                    }
+                });
+
+                $("#btnClick").click(function(){
+                    var user= $("#txtUser").val();
+                    var pass= $("#txtPassword").val();
+                    var p=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{5,12}$/;
+                    if(p.test(pass)){
+                        window.alert("Successfully Logged In");
+                    }
+                    else{
+                        window.alert("Enter correct Password");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="card-body">
+                    <form id="validateLogin">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="txtUser" class="form-control" name="username" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="txtPassword" class="form-control" name="password" placeholder="Enter Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="btnClick" class="btn btn-primary">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

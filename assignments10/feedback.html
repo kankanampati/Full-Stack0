@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script src="bootstrap-4.5.0-dist/js/jquery.validation.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){                
+                $("#validateLogin").validate({
+                    rules: {
+                        name: {
+                            required: true,
+                        },
+                        mobile: {
+                            required: true,
+                            minlength: 10
+                        },
+                        dob: {
+                            required: true
+                        },
+                        feedback: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: "Enter Name"
+                        },
+                        mobile: {
+                            required: "Enter Mobile Number",
+                            minlength: "Mobile number should be minimum of 10 numbers"
+                        },
+                        dob: {
+                            required: "Enter Date of Birth"
+                        },
+                        feedback: {
+                            required: "Enter Feedback"
+                        }
+                    }
+                });
+
+                $("#btnClick").click(function(){
+                    var dob= $("#txtDOB").val();
+                    var mob=$("#txtMobile").val();
+                    var d=/^(([0-2][0-9])|([3][0-1]))[/](([0][0-9])|([1][0-2]))[/]([1][9][0-9]{2})|([2][0-9]{3})$/;
+                    var m=/^[6-9][0-9]{9}$|^[0][6-9][0-9]{9}$|^[+][9][1][6-9][0-9]{9}$/;
+                    if(d.test(dob)&&m.test(mob)){
+                        window.alert("Feedback Submitted");
+                    }
+                    else{
+                        window.alert("Enter correct Date of Birth or Mobile No.");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Feedback Form</h3>
+                </div>
+                <div class="card-body">
+                    <form id="validateLogin">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="txtName" class="form-control" name="name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="text" id="txtDOB" class="form-control" name="dob" placeholder="Enter Date of birth">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile No.</label>
+                            <input type="text" id="txtMobile" class="form-control" name="mobile" placeholder="Enter Mobile Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback">Feedback</label>
+                            <textarea name="feedback" id="txtFeedback" cols="30" rows="3" placeholder="Enter Feedback" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="btnClick" class="btn btn-primary">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
