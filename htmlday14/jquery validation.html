@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Page</title>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnLogin").click(function(){
+                var val1 =$("#txtUsername").val();
+                var val2 =$("#txtPassword").val();
+                if(val1 == '' && val2 == ''){
+                    $('input[type="text"]').css("border","2px solid red");
+                    window.alert('fill the Username and Password');
+                }
+                else{
+
+                }
+            });
+        });
+        </script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" class="form-control" id="txtUsername" placeholder="Enter Username"/>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="text" class="form-control" id="txtPassword" placeholder="Enter Password"/>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
+            </form>
+        </div>
+    </body>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#validateLogin").validate({
+            rules : {
+                email :{
+                    required : true
+                },
+                password :{
+                    required :true
+                }
+            },
+            messages :{
+                email:{
+                    required : "Enter EmailID"
+                },
+                password:{
+                    required : "Enter Password"
+                }
+            }
+        });
+    });
+    </script>
+</html>

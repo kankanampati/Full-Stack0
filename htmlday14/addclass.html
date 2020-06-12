@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Add class</title>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnAddClass").click(function(){
+                $("p").addClass("test");
+            });
+
+        });
+        </script>
+        <style>
+        p{
+            font-size: medium;
+            font-style: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .test{
+            font-style: italic;
+            font-size: xx-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        </style>
+    </head>
+    <body>
+        <p>nanda</p><br/>
+        <button type="button" id="btnAddClass">AddClass</button>
+    </body>
+</html>

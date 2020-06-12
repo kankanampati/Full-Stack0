@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Add class</title>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btnAddCss").click(function(){
+                $("#div1").css("background-color","lightblue");
+            });
+            $("#btnAddCss1").click(function(){
+                $("#div1").css({
+                    'background-color':'lightblue',
+                    'color':'darkblue',
+                    'font-size': 'xx-large'
+            });
+
+           });
+        });
+        </script>
+    </head>
+    <body>
+       <div id="div1"></div>
+           <p>Application working Status</p>
+       </div>
+        <button type="button" id="btnAddCss">Addcssproperties</button>
+        <button type="button" id="btnrAddCss1">multipleproperties</button>
+    </body>
+</html>
