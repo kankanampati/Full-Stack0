@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Player</title>
+        <link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script src="../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="container"><br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <video height="150px" width="250px" controls src="https://www.iandevlin.com/html5test/webvtt/v/upc-tobymanley.theora.ogg" id="playlist1" class="one"></video>
+                </div>
+                <div class="col-md-5">
+                    <video height="150px" width="250px" controls src="https://www.radiantmediaplayer.com/media/bbb-360p.mp4" id="playlist2" class="two"></video>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <video height="150px" width="250px" controls src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" id="playlist3" class="three"></video> 
+                </div>
+                <div class="col-md-5">
+                    <video height="150px" width="250px" controls src="https://thepaciellogroup.github.io/AT-browser-tests/video/ElephantsDream.mp4" id="playlist4" class="four"></video>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-12" style="margin-left: 290px;">
+                    <video height="150px" width="250px" controls src="http://www.storiesinflight.com/js_videosub/jellies.mp4" id="playlist5" class="five"></video>
+                </div>
+            </div><br>
+            <div style="margin-left: 310px;">
+                <button type="button" class="btn btn-primary" onclick="playAudio()">Play</button>
+                <button type="button" class="btn btn-secondary" onclick="pauseAudio()">Pause</button> 
+                <button type="button" class="btn btn-primary" onclick="nextAudio()">Next</button>
+                <button type="button" class="btn btn-secondary" onclick="prevAudio()">Prev</button>
+            </div>
+        </div>
+        <script>
+            var playlist=document.getElementById("playlist1");
+            var num=1;
+            function playAudio(){
+                playlist.play();
+            }
+            function pauseAudio(){
+                playlist.pause();
+            }
+            function nextAudio(){
+                if(num==1)
+                {
+                    num=num+1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist2");
+                    playAudio();
+                }
+                else if(num==2){
+                    num=num+1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist3");
+                    playAudio();
+                }
+                else if(num==3){
+                    num=num+1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist4");
+                    playAudio();
+                }
+                else if(num==4){
+                    num=num+1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist5");
+                    playAudio();
+                }
+                else if(num==5){
+                    num=1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist1");
+                    playAudio();
+                }
+            }
+            function prevAudio(){
+                if(num==1){
+                    num=5;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist5");
+                    playAudio();
+                }
+                else if(num==2){
+                    num=num-1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist1");
+                    playAudio();
+                }
+                else if(num==3){
+                    num=num-1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist2");
+                    playAudio();
+                }
+                else if(num==4){
+                    num=num-1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist3");
+                    playAudio();
+                }
+                else if(num==5){
+                    num=num-1;
+                    playlist.pause();
+                    playlist=document.getElementById("playlist4");
+                    playAudio();
+                }
+            }
+        </script>  
+    </body>
+</html>
