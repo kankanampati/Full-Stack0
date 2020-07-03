@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#btnSubmit").click(function(){
+                      var email = $('#txtEmail').val();
+                      var name = $('#txtname').val();
+                      var api_url = "http://localhost:3001/users";
+                      var data = {
+                          name,
+                          email
+                      }
+                      $.ajax({
+                          url:api_url,
+                          type:"POST",
+                          dataType:"json",
+                          data:data,
+                          success:function(d){
+                              alert('values are submitted');
+                          },
+                          error:function(){
+                              alert('wrong with insert');
+                          }
+                      });
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="txtname"/><br />
+        <input type="text" id="txtEmail"/><br />
+        <button type="submit" id="btnSubmit">Submit</button>
+    </body>
+</html>
