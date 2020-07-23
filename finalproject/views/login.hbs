@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/style1.css">
+    <title>Document</title>
+     <style>
+        .main-header{
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="/index">HOME</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/register">REGISTER</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+    <div class="login">
+    <h1>Login</h1>
+     <form action="/auth/login" method="POST">
+        <input type="text" name="email" placeholder="Email" required="required" />
+        <input type="password" name="password" placeholder="password" required="required" />
+        <div>
+          <a href="/update"><p>forgot password..?</p></a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    </form>
+    {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            {{/if}}
+</div>
+</body>
+</html>
